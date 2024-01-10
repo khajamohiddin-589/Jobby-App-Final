@@ -1,0 +1,48 @@
+.user-profile-filtering-container {
+  width: 90%;
+}
+
+@media screen and (min-width: 576px) {
+  .user-profile-filtering-container {
+    margin-left: 20px;
+    width: 20vw;
+    height: 100vh;
+  }
+}
+
+.line {
+  color: white;
+  margin-top: 20px;
+  width: 100%;
+}
+.filtering-container {
+  margin-bottom: 20px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.filter-heading {
+  font-size: 20px;
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+.filter-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.checkbox-input {
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+}
+.label-input {
+  font-size: 15px;
+  font-family: 'Roboto';
+}
+
+.list-item-filter {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
