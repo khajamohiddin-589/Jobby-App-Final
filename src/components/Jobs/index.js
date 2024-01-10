@@ -99,7 +99,9 @@ class Jobs extends Component {
     const {searchText, employeeType, radioValue} = this.state
     const jwtToken = Cookies.get('jwt_token')
 
-    const url = `https://apis.ccbp.in/jobs?employment_type=${employeeType.join()}&minimum_package=${radioValue}&search=${searchText}`
+    const url = `https://apis.ccbp.in/jobs?employment_type=${employeeType.join(
+      ',',
+    )}&minimum_package=${radioValue}&search=${searchText}`
     const options = {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -218,14 +220,16 @@ class Jobs extends Component {
                 placeholder="Search"
                 type="search"
                 className="search-jobs-page"
-              />
-
-              <div className="search-icon-container-jobs">
-                <IoIosSearch
-                  onClick={this.onClickSearchIcon}
-                  className="search-icon-jobs"
-                />
-              </div>
+              />{' '}
+              <button
+                type="button"
+                data-testid="searchButton"
+                onClick={this.onClickSearchIcon}
+                className="search-icon-container-jobs"
+              >
+                {' '}
+                <IoIosSearch className="search-icon-jobs" />{' '}
+              </button>
             </div>
             <UserProfileAndFiltering
               changeType={this.changeType}
@@ -242,13 +246,16 @@ class Jobs extends Component {
                 placeholder="Search"
                 type="search"
                 className="search-jobs-page"
-              />
-              <div className="search-icon-container-jobs">
-                <IoIosSearch
-                  onClick={this.onClickSearchIcon}
-                  className="search-icon-jobs"
-                />
-              </div>
+              />{' '}
+              <button
+                type="button"
+                data-testid="searchButton"
+                onClick={this.onClickSearchIcon}
+                className="search-icon-container-jobs"
+              >
+                {' '}
+                <IoIosSearch className="search-icon-jobs" />{' '}
+              </button>
             </div>
             {this.renderJobsList()}
           </div>

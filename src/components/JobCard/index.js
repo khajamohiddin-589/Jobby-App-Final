@@ -96,7 +96,6 @@ class JobCard extends Component {
     const {jobDetails, similarJobDetails} = this.state
     console.log(similarJobDetails)
     const {
-      id,
       title,
       companyLogoUrl,
       companyWebsiteUrl,
@@ -116,7 +115,7 @@ class JobCard extends Component {
             <div className="logo-container-card">
               <img
                 src={companyLogoUrl}
-                alt={id}
+                alt="job details company logo"
                 className="company-logo-job-card"
               />
               <div className="job-role-container-card">
@@ -139,14 +138,14 @@ class JobCard extends Component {
                 </div>
               </div>
               <div className="job-details-container-two-card">
-                <h1 className="salary-heading-card">{packagePerAnnum}</h1>
+                <p className="salary-heading-card">{packagePerAnnum}</p>
               </div>
             </div>
           </div>
           <hr className="line-job-item-card" />
           <div className="description-container-card">
             <div className="description-visit-link-container">
-              <p className="description-card">Description</p>
+              <h1 className="description-card">Description</h1>
               <a href={companyWebsiteUrl} className="link-container">
                 <p className="visit-text">Visit</p>
                 <FaExternalLinkAlt className="link-icon" />
@@ -167,7 +166,11 @@ class JobCard extends Component {
             <h1 className="life-at-company-text">Life at Company</h1>
             <div className="life-at-company-inner-container">
               <p className="life-at-company-description">{description}</p>
-              <img src={imageUrl} alt={id} className="life-at-company-image" />
+              <img
+                src={imageUrl}
+                alt="life at company"
+                className="life-at-company-image"
+              />
             </div>
           </div>
         </div>

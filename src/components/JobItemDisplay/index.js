@@ -22,7 +22,11 @@ const JobItemDisplay = props => {
       <li className="each-job-item-display-container">
         <div className="job-item-main-container">
           <div className="logo-container">
-            <img src={companyLogoUrl} alt={id} className="company-logo-job" />
+            <img
+              src={companyLogoUrl}
+              alt="company logo"
+              className="company-logo-job"
+            />
             <div className="job-role-container">
               <h1 className="job-role-heading">{title}</h1>
               <div className="rating-icon-container">
@@ -49,7 +53,7 @@ const JobItemDisplay = props => {
         </div>
         <hr className="line-job-item" />
         <div className="description-container">
-          <p className="description">Description</p>
+          <h1 className="description">Description</h1>
           <p className="detailed-description">{jobDescription}</p>
         </div>
       </li>

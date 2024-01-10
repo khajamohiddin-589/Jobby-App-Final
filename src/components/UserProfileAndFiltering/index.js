@@ -8,7 +8,7 @@ const UserProfileAndFiltering = props => {
       <UserProfile />
       <hr className="line" />
       <div className="filtering-container">
-        <h1 className="filter-heading">Types of Employment</h1>
+        <h1 className="filter-heading">Type of Employment</h1>
         <ul className="filter-list">
           {employmentTypesList.map(eachEmployee => {
             const {changeType} = props
@@ -56,13 +56,10 @@ const UserProfileAndFiltering = props => {
                 <input
                   type="radio"
                   name="salary"
-                  id={eachSalary.salaryRangeId}
+                  id={eachSalary.label}
                   className="checkbox-input"
                 />
-                <label
-                  className="label-input"
-                  htmlFor={eachSalary.salaryRangeId}
-                >
+                <label className="label-input" htmlFor={eachSalary.label}>
                   {eachSalary.label}
                 </label>
               </li>

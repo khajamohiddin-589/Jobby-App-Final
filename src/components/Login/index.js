@@ -85,7 +85,7 @@ class Login extends Component {
               onChange={this.onChangePassword}
               placeholder="Password"
               id="password"
-              type="text"
+              type="password"
               className="login-input-field"
             />
           </div>

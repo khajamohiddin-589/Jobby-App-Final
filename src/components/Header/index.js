@@ -12,7 +12,7 @@ const Header = props => {
   const onClickLogout = () => {
     Cookies.remove('jwt_token')
     const {history} = props
-    history.push('/login')
+    history.replace('/login')
   }
   return (
     <nav className="header-container">
@@ -25,17 +25,23 @@ const Header = props => {
               alt="website logo"
             />
           </Link>
-          <div className="header-icons-container">
+          <ul className="header-icons-container">
             <Link to="/" className="nav-link">
-              <TiHome className="react-icon" />
+              <li>
+                <TiHome className="react-icon" />
+              </li>
             </Link>
             <Link to="/jobs" className="nav-link">
-              <BsFillBriefcaseFill className="react-icon" />
+              <li>
+                <BsFillBriefcaseFill className="react-icon" />
+              </li>
             </Link>
             <Link to="/login">
-              <FiLogOut onClick={onClickLogout} className="react-icon" />
+              <li>
+                <FiLogOut onClick={onClickLogout} className="react-icon" />
+              </li>
             </Link>
-          </div>
+          </ul>
         </div>
       </div>
       <div className="large-nav-container">
@@ -47,14 +53,14 @@ const Header = props => {
               alt="website logo"
             />
           </Link>
-          <div className="home-jobs-container">
+          <ul className="home-jobs-container">
             <Link to="/" className="nav-link">
-              <h1 className="nav-heading">Home</h1>
+              <li className="nav-heading">Home</li>
             </Link>
             <Link to="/jobs" className="nav-link">
-              <h1 className="nav-heading">Jobs</h1>
+              <li className="nav-heading">Jobs</li>
             </Link>
-          </div>
+          </ul>
           <button
             onClick={onClickLogout}
             type="button"
